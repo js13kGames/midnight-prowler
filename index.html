@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>Midnight Prowler</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #000; 
+            overflow: hidden; 
+            font-family: monospace;
+        }
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .hint {
+            position: fixed; 
+            left: 50%; 
+            top: 16px; 
+            transform: translateX(-50%);
+            color: #9cf; 
+            font: 14px/1.4 monospace;
+            opacity: .75; 
+            user-select: none; 
+            z-index: 2;
+        }
+        
+        .ui {
+            position: fixed; 
+            top: 16px; 
+            left: 16px; 
+            color: #fff; 
+            font: 14px monospace; 
+            text-shadow: 1px 1px 2px #000; 
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="game-canvas"></canvas>
+    
+    <div class="hint">Click on the screen to start · Mouse to turn · WASD to move · Spacebar to jump</div>
+    <div class="ui" id="ui"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
